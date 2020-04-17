@@ -70,22 +70,15 @@ client.on('message', message => {
 	function anim() {
       
         message.member.guild.setName('Vampire').catch(console.error)
-        message.member.guild.setName('VampireG').catch(console.error)
-        message.member.guild.setName('VampireGa').catch(console.error)
-        message.member.guild.setName('VampireGam').catch(console.error)
-        message.member.guild.setName('VampireGam\'').catch(console.error)
         message.member.guild.setName('VampireGam\'s').catch(console.error)
-        message.member.guild.setName('VampireGam\'').catch(console.error)
-        message.member.guild.setName('VampireGam').catch(console.error)
-        message.member.guild.setName('VampireGa').catch(console.error)
-        message.member.guild.setName('VampireG').catch(console.error)
+       
     }
 	
 	if(message.content === prefix + "animate") {
         	if(!message.member.hasPermission("MANAGE_GUILD")) {return message.channel.send("Permission manquante: MANAGE_GUILD")} {
             		if(animated == false) {
 				animated = true
-				inet = setInterval(anim, 800)
+				inet = setInterval(anim, 1500)
 			}else {
 				message.channel.send("L'animation est déjà en cours")
 			}
