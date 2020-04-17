@@ -64,6 +64,43 @@ client.on('message', message => {
 	message.channel.send(embed)
 	
 	}
+	
+	
+	
+	function anim() {
+      
+        message.member.guild.setName('Vampire').catch(console.error)
+        message.member.guild.setName('VampireG').catch(console.error)
+        message.member.guild.setName('VampireGa').catch(console.error)
+        message.member.guild.setName('VampireGam').catch(console.error)
+        message.member.guild.setName('VampireGam\'').catch(console.error)
+        message.member.guild.setName('VampireGam\'s').catch(console.error)
+        message.member.guild.setName('VampireGam\'').catch(console.error)
+        message.member.guild.setName('VampireGam').catch(console.error)
+        message.member.guild.setName('VampireGa').catch(console.error)
+        message.member.guild.setName('VampireG').catch(console.error)
+    }
+	
+	if(message.content === prefix + "animate") {
+        	if(!message.member.hasPermission("MANAGE_GUILD")) {return message.channel.send("Permission manquante: MANAGE_GUILD")} {
+            		if(animated == false) {
+				animated = true
+				inet = setInterval(anim, 800)
+			}else {
+				message.channel.send("L'animation est déjà en cours")
+			}
+            
+        }
+        
+    }
+
+	
+	if(message.content === prefix + "anstop"){
+		if(!message.member.hasPermission("MANAGE_GUILD")) {return message.channel.send("Permission manquante: MANAGE_GUILD")} {
+			clearInterval(inet)
+			animated = false
+		}
+	}
 
 	
 	if(message.content.startsWith(prefix + "sond")) {
